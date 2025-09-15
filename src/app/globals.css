@@ -1,15 +1,24 @@
-@import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --web-primary-color: #6D40D4;
+  --web-secondary-color: #3538CD;
+  --heading-title-color: #101828;
+  --description-color: #475467;
+  --inactive-color: #d0d5dd;
+  --disabled-color: #e3d7fe;
+  --placeholder-color: #667085;
+  --icons-color: #98a2b3;
+  --success-color: #17b26a;
+  --error-color: #f04438;
+  --warning-color: #f79009;
+  --info-color: #0ba5ec;
+  --background-color: #f3f3f9;
+  --white-color: #ffffff;
+  --tertiary-color: #fd6a15;
+  --table-header: #EAECF0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +29,106 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background-color);
+  font-family: "Nunito Sans", serif;
+  font-optical-sizing: auto;
+}
+
+
+.ant-table-thead>tr>th {
+  background-color: var(--table-header) !important;
+  /* This is Tailwind's blue-500 */
+  /* color: white !important; */
+  border-radius: 0 !important;
+}
+
+.padding-free-card .ant-card-body {
+  padding: 0px !important;
+}
+
+.flex-row {
+  height: 100%;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.ant-checkbox+span {
+  text-align: justify;
+}
+
+nextjs-portal {
+  display: none;
+}
+
+
+.pos-rel {
+  position: relative;
+  top: -70;
+}
+
+.ant-card {
+  min-height: 250px !important;
+  /* overflow-y: scroll; */
+  /* box-shadow: '0 1px 2px rgba(0, 0, 0, 0.2)' !important;
+  border-radius: 13px !important; */
+}
+
+svg.recharts-surface {
+  width: 95% !important;
+}
+
+.ant-card-body {
+  padding: 15px !important;
+}
+
+.ant-table-tbody>tr>td {
+  padding: 1.5em 2.3em !important;
+  /* border-bottom: 4px solid #000 !important; */
+}
+
+/* .scrollable-table {
+  height: 300px;
+  overflow: scroll;
+} */
+
+
+.login-bg,
+.login-bg-2 {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-bg-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.recharts-default-legend {
+  display: none;
+  justify-content: space-around;
+}
+
+.custom-stacked-bar-chart .recharts-default-legend {
+  display: none !important;
+}
+
+.recharts-cartesian-axis-tick tspan {
+  font-size: 12px !important;
+}
+
+/* span {
+  text-decoration: none !important;
+} */
+
+@media (max-width: 769px) {
+  .card-tit {
+    font-size: 10px;
+  }
+}
+
+.detected .recharts-legend-wrapper {
+  display: none !important;
 }

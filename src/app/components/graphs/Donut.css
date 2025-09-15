@@ -1,0 +1,14 @@
+.bg-grad-medium {
+    background: linear-gradient(135deg, #FFD554 0%, #FFF3C4 100%);
+  }
+  
+  .bg-grad-low {
+    background: linear-gradient(135deg, #46E581 30%, #FFFFFF 100%);
+  }
+  
+  .bg-grad-high {
+    background: linear-gradient(135deg, #FF6060 20%, #FFFFFF 100%);
+  }
+  
+  
+  
